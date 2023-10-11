@@ -1,4 +1,4 @@
-var Instruments = ["Guitar", "Drums", "Piano", "Bass", "violin", "Trumpet", "Flute"];
+var Instruments = ["Guitar", "Drums", "Piano", "Bass", "Violin", "Trumpet", "Flute"];
 var Content = "";
 var Y;
 function for_Loop() {
@@ -6,4 +6,15 @@ function for_Loop() {
         Content += Instruments[Y] + "<br>";
     }
     document.getElementById("List_of_Instruments").innerHTML = Content;
+}
+function while_Loop() {
+    var i = 0;
+    var Instruments = ["Guitar", "Drums", "Piano", "Bass", "Violin", "Trumpet", "Flute"];
+    var keepAdding = "";
+    while (i < Instruments.length) {
+        keepAdding += Instruments[i] + "<br>";
+        i++;
+
+    }
+    document.getElementById("Count_the_Instruments").innerHTML = keepAdding;
 }
