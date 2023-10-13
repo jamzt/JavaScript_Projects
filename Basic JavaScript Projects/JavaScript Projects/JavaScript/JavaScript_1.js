@@ -25,5 +25,4 @@ function Color_Function() {
         Color_Output = "Please enter a color exactly as written on the above list.";      
     }
     document.getElementById("Output").innerHTML = Color_Output;
-
 }

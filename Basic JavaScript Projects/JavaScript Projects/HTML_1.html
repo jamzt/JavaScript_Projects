@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script src="JS/JavaScript_1.js"></script>
+        <script src="JavaScript/JavaScript_1.js"></script>
     </head>
     <body>
         <h1>What is your favorite color?</h1>
@@ -18,6 +18,23 @@
         <h3>Enter your choice below:</h3>
         <input id="Color_Input" type="text">
         <button onclick="Color_Function()">Submit Color</button>
-        <p id="Output"></p>        
+        <p id="Output"></p>   
+        <canvas id="myCanvas" widgth="500" height="250" style="border:5px solid black;"></canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+    
+            // Create a linear gradient
+            var gradient = context.createLinearGradient(0, 100, 200, 250);
+    
+            // Define gradient colors and positions
+            gradient.addColorStop(0, "purple");        // Start with red at 0%
+            gradient.addColorStop(0.5, "white");    // Transition to green at 50%
+            gradient.addColorStop(1, "blue");       // End with blue at 100%
+    
+            // Fill a rectangle with the gradient
+            context.fillStyle = gradient;
+            context.fillRect(0, 0, 500, 250);
+        </script>
     </body>
 </html>
