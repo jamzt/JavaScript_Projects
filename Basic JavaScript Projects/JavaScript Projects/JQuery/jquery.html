@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    </head>
+   
+    <script>
+        $(document).ready(function() {
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2' >Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("#2").css({"color":"red"});
+            $("#3").click(function() {
+                $('h1').hide().fade();
+            });
+        }); // jquery() is same as $(). jquery allows doing same stuff to your website without writing lines of code in js. it's a ready librabry youb can laverage
+        $(document).ready(function() {
+            // Binding multiple events with different handlers
+            $( "p" ).on({
+        "click": function() { console.log( "clicked!" ); },
+        "mouseover": function() { console.log( "hovered!" ); }
+        });
+        
+        $(document).ready(function() {
+            // Hide all paragraphs using a slide up animation over 0.8 seconds
+            $( "p" ).slideUp( 800 );
+ 
+            // Show all hidden divs using a slide down animation over 0.6 seconds
+            $( "div.hidden" ).slideDown( 600 );
+        });
+    });
+
+    </script>
+</html>
